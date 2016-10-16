@@ -1,0 +1,23 @@
+{% extends "ohaut_base.html" %}
+
+{% block head_extra %}
+{% endblock %}
+
+{% block tabs %}
+   <li class="active"><a data-toggle="tab" href="#lamp" aria-controls="door">Door</a></li>
+{% endblock %}
+
+{% block tab_panes %}
+    <div role="tabpanel" class="tab-pane fade in active" id="door">
+
+      <h1>Door and ringbell</h1>
+
+      <a href="/openDoor" class="btn btn-info" role="button" onclick="return open_door();">
+        <span class="glyphicon glyphicon-cloud-download"
+            aria-hidden="true"></span> Open door</a>
+    </div>
+{% endblock %}
+
+{% block javascript_imports %}
+    <script src="js/ring.js"></script>
+{% endblock %}
